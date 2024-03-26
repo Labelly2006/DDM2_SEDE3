@@ -42,21 +42,21 @@
 	</head>
 	<body>		
 		<h2 style="text-align: center;">Exercício 5</h2>
-        <h3>Função: nomeada</h3>
-        <button class="button" onclick="mostrarMensagem()">Clique aqui</button>
-        <p id="mensagem1"></p> <br><br>
-
-        <h3>Função: nomeada com parametro e retorno</h3>
-        <div id="mensagem2"></div>
-        <button class="button" onclick="saudacao('Usuário')">Clique aqui para ser saudado!</button> <br><br>
-
-        <h3>Função: com construtor</h3>
-        <button class="button" id="createButton">Criar Novo Objeto</button>
-		<div id="output"></div>
-        <br>
-
-        <h3>Função: literal</h3>
-        <div id="myDiv"></div>
+	        <h3>Função: nomeada</h3>
+	        <button class="button" onclick="mostrarMensagem()">Clique aqui</button>
+	        <p id="mensagem1"></p> <br><br>
+	
+	        <h3>Função: nomeada com parametro e retorno</h3>
+	        <div id="mensagem2"></div>
+	        <button class="button" onclick="saudacao('Usuário')">Clique aqui para ser saudado!</button> <br><br>
+	
+	        <h3>Função: com construtor</h3>
+	        <button class="button" id="createButton">Criar Novo Objeto</button>
+			<div id="output"></div>
+	        <br>
+	
+	        <h3>Função: literal</h3>
+	        <div id="myDiv"></div>
 		<button class="button" onclick="changeColor()">Mudar Cor</button>
 		
 		<h3>Função: de flecha</h3>
@@ -70,49 +70,49 @@
 		
 		
 		<h2  style="text-align: center;">Exercício 7</h2>
-        <input type="text" id="inputString" placeholder="Digite uma frase">
-        <button onclick="converterEExibir()" class="button">Converter</button>
-        <strong>
-           <p id="resultado"></p>
-        </strong>
+	        <input type="text" id="inputString" placeholder="Digite uma frase">
+	        <button onclick="converterEExibir()" class="button">Converter</button>
+	        <strong>
+	           <p id="resultado"></p>
+	        </strong>
 		
 		
 		<h2  style="text-align: center;">Exercício 8</h2>
-        <label for="numero1" class="form"><strong>Número 1:</strong></label>
-        <input type="number" id="numero1"><br><br>
-        <label for="numero2"><strong>Número 2:</strong></label>
-        <input type="number" id="numero2"><br><br>
-        <button onclick="realizarSomas()" class="button">Calcular Soma</button><br><br>
-        <div id="RESULTADO"></div>
+	        <label for="numero1" class="form"><strong>Número 1:</strong></label>
+	        <input type="number" id="numero1"><br><br>
+	        <label for="numero2"><strong>Número 2:</strong></label>
+	        <input type="number" id="numero2"><br><br>
+	        <button onclick="realizarSomas()" class="button">Calcular Soma</button><br><br>
+	        <div id="RESULTADO"></div>
 		
 		<script>		
 			// exercicio 5
 			//--------------- FUNÇÃO->Nomeada ---------------
-            function mostrarMensagem() {
-                var elemento = document.getElementById("mensagem1");
-                elemento.innerHTML = "O botão foi clicado!";
-            }
+	            	function mostrarMensagem() {
+	                	var elemento = document.getElementById("mensagem1");
+	                	elemento.innerHTML = "O botão foi clicado!";
+	            	}
+	
+	            	//--------------- FUNÇÃO->Função Nomeada com argumento(parametro) e retorno; ---------------
+	            	// Definindo a função nomeada
+	            	function saudacao(nome) {
+                    		// Obtendo o elemento HTML com o ID 'mensagem'
+                    		var elemento = document.getElementById('mensagem2');
 
-            //--------------- FUNÇÃO->Função Nomeada com argumento(parametro) e retorno; ---------------
-            // Definindo a função nomeada
-            function saudacao(nome) {
-                    // Obtendo o elemento HTML com o ID 'mensagem'
-                    var elemento = document.getElementById('mensagem2');
+                		// Verificando se o elemento existe
+               		 	if (elemento) {
+                    		// Criando a mensagem de saudação
+                    		var mensagem = 'Olá, ' + nome + '! Bem-vindo(a) ao nosso site!';
 
-                // Verificando se o elemento existe
-                if (elemento) {
-                    // Criando a mensagem de saudação
-                    var mensagem = 'Olá, ' + nome + '! Bem-vindo(a) ao nosso site!';
+                    		// Atualizando o conteúdo do elemento HTML com a mensagem
+                   		 elemento.innerHTML = mensagem;
+                	} else {
+                    		console.error('Elemento HTML com ID "mensagem" não encontrado.');
+                		}
+            		}
 
-                    // Atualizando o conteúdo do elemento HTML com a mensagem
-                    elemento.innerHTML = mensagem;
-                } else {
-                    console.error('Elemento HTML com ID "mensagem" não encontrado.');
-                }
-            }
-
-            //--------------- FUNÇÃO->com Construtor; ---------------
-            // Definindo a função construtora
+           		//--------------- FUNÇÃO->com Construtor; ---------------
+            		// Definindo a função construtora
 			function Pessoa(nome, idade) {
 				this.nome = nome;
 				this.idade = idade;
@@ -135,19 +135,19 @@
 				pessoa.mostrarDados();
 			});
 
-            //--------------- FUNÇÃO->Literal (variável); ---------------
-            function changeColor() {
-				// Array de cores
-				var colors = ["red", "blue", "green", "orange", "purple", "pink", "cyan"];
-
-				// Seleciona uma cor aleatória
-				var randomColor = colors[Math.floor(Math.random() * colors.length)];
-
-				// Obtém a referência ao elemento <div>
-				var divElement = document.getElementById("myDiv");
-
-				// Muda a cor de fundo do elemento <div>
-				divElement.style.backgroundColor = randomColor;
+            		//--------------- FUNÇÃO->Literal (variável); ---------------
+		        function changeColor() {
+					// Array de cores
+					var colors = ["red", "blue", "green", "orange", "purple", "pink", "cyan"];
+		
+					// Seleciona uma cor aleatória
+					var randomColor = colors[Math.floor(Math.random() * colors.length)];
+		
+					// Obtém a referência ao elemento <div>
+					var divElement = document.getElementById("myDiv");
+		
+					// Muda a cor de fundo do elemento <div>
+					divElement.style.backgroundColor = randomColor;
 			}
 			
 			
@@ -175,7 +175,7 @@
 			
 			// string --- exercicio 7
 			function converterParaMaiusculo(frase) {
-             return frase.toUpperCase();
+             			return frase.toUpperCase();
 			}
 			function converterEExibir() {
 				var inputString = document.getElementById("inputString").value;
@@ -186,7 +186,7 @@
 			
 			// soma ---- exercicio 8
 			function somarNumeros(num1, num2) {
-             return num1 + num2;
+             			return num1 + num2;
 			}
 			function realizarSomas() {
 				var num1 = parseFloat(document.getElementById("numero1").value);
