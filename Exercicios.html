@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Exercícios 1 e 2 JavaScript</title>
+		<title>Exercícios JavaScript</title>
 		<meta charset="UTF-8">
 		<meta name="description" content="Free Web tutorials">
 		<meta name="keywords" content="HTML, CSS, JavaScript">
@@ -26,12 +26,16 @@
 				background-color: #f44336;
 				color: white;
 			}
+
 		</style>
 	</head>
 	<body>
 		<p>Clique no botão para exibir a caixa de confirmação.</p>
 		<button class="button" onclick="funcao1()">Clique aqui</button>
 		<p id="demo"></p>
+		
+		<button class="button" id="btn">Clique aqui para contar</button>
+		<p>Button Clicked <span id="display">0</span> Times</p>
 
 		<script>
 		
@@ -51,6 +55,16 @@
 			  }
 			document.getElementById("demo").innerHTML=x;
 			}
+			
+			var count = 0;
+			var btn = document.getElementById("btn");
+			var disp = document.getElementById("display");
+	  
+			btn.onclick = function () {
+				count++;
+				disp.innerHTML = count;
+			}
 		</script>
+
 	</body>
 </html>
