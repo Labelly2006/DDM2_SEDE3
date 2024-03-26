@@ -80,16 +80,16 @@
 		
 		
 		<h2 style="text-align: center;">Exercício 4</h2>
-        <h3>Onmouseover</h3>
-        <div id="meuDivo" style="width: 100px; height: 100px; background-color: red;"></div> <br>
-
-        <h3>Onfocus</h3>
-        <input type="text" id="meuInput" placeholder="Digite aqui">
-        <p id="mensagem"></p> <br>
-
-        <h3>Onchange</h3>
-        <label for="nome">Digite seu nome:</label>
-        <input type="text" id="nome" onchange="mostrarMensagem()">
+	        <h3>Onmouseover</h3>
+	        <div id="meuDivo" style="width: 100px; height: 100px; background-color: red;"></div> <br>
+	
+	        <h3>Onfocus</h3>
+	        <input type="text" id="meuInput" placeholder="Digite aqui">
+	        <p id="mensagem"></p> <br>
+	
+	        <h3>Onchange</h3>
+	        <label for="nome">Digite seu nome:</label>
+	        <input type="text" id="nome" onchange="mostrarMensagem()">
 	
 		<script>
 			// exercicio 1
@@ -151,39 +151,39 @@
 			
 			// exercicio 4
 			//--------------- ONMOUSEOVER ---------------
-            // Selecionar a div
-            var meuDiv = document.getElementById('meuDivo');
-
-            // Adicionar um event listener para o evento de mouse sobre
-            meuDiv.addEventListener('mouseover', function() {
-                this.style.backgroundColor = 'red';
-            });
-
-            // Adicionar um event listener para o evento de mouse fora
-            meuDiv.addEventListener('mouseout', function() {
-                this.style.backgroundColor = 'yellow';
-            });
-            
-            //--------------- ONCHANGE ---------------
-            function mostrarMensagem() {
-                var nome = document.getElementById("nome").value;
-                document.getElementById("mensagem").innerText =  "Olá, " + nome + "! Seu nome foi alterado.";
-            }
-
-            //--------------- ONFOCUS ---------------
-            // Selecionar o input
-            var meuInput = document.getElementById('meuInput');
-            var mensagem = document.getElementById('mensagem');
-
-            // Adicionar um event listener para o evento onfocus
-            meuInput.addEventListener('focus', function() {
-                mensagem.textContent = 'O campo está em foco.';
-            });
-
-            // Adicionar um event listener para o evento onblur (perda de foco)
-            meuInput.addEventListener('blur', function() {
-                mensagem.textContent = ''; // Limpar a mensagem quando o campo perde o foco
-            });
+		        // Selecionar a div
+		        var meuDiv = document.getElementById('meuDivo');
+		
+		        // Adicionar um event listener para o evento de mouse sobre
+		        meuDiv.addEventListener('mouseover', function() {
+		        	this.style.backgroundColor = 'red';
+		        });
+		
+		        // Adicionar um event listener para o evento de mouse fora
+		         meuDiv.addEventListener('mouseout', function() {
+		                this.style.backgroundColor = 'yellow';
+		        });
+		            
+		        //--------------- ONCHANGE ---------------
+		        function mostrarMensagem() {
+		                var nome = document.getElementById("nome").value;
+		                document.getElementById("mensagem").innerText =  "Olá, " + nome + "! Seu nome foi alterado.";
+		        }
+		
+		        //--------------- ONFOCUS ---------------
+		        // Selecionar o input
+		        var meuInput = document.getElementById('meuInput');
+		        var mensagem = document.getElementById('mensagem');
+		
+		        // Adicionar um event listener para o evento onfocus
+		        meuInput.addEventListener('focus', function() {
+		        	mensagem.textContent = 'O campo está em foco.';
+		        });
+		
+		        // Adicionar um event listener para o evento onblur (perda de foco)
+		        meuInput.addEventListener('blur', function() {
+		                mensagem.textContent = ''; // Limpar a mensagem quando o campo perde o foco
+		        });
 			
 		</script>
 
